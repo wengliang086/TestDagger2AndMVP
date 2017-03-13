@@ -1,6 +1,8 @@
 package com.demo.testandroidmvp;
 
 import com.demo.testandroidmvp.ui.activity.SplashActivity;
+import com.demo.testandroidmvp.ui.activity.component.SplashActivityComponent;
+import com.demo.testandroidmvp.ui.activity.module.SplashActivityModule;
 
 import dagger.Component;
 
@@ -10,5 +12,5 @@ import dagger.Component;
 @Component(modules = AppModule.class)
 public interface AppComponent {
 
-    void inject(SplashActivity splashActivity);
+    SplashActivityComponent plus(SplashActivityModule module);
 }
